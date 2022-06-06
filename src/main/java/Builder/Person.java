@@ -43,6 +43,7 @@ public class Person {
     private Boolean isMarried;
 
     public Person(Builder builder) {
+        // 可以在这里进行某些校验
         this.name = builder.name;
         this.age = builder.age;
         this.sex = builder.sex;
@@ -117,6 +118,7 @@ public class Person {
             return this;
         }
         public Person build() {
+            // 通过这种方法，可以在构造函数里面进行某些校验
             return new Person(this);
         }
     }
