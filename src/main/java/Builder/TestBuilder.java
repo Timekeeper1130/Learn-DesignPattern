@@ -7,7 +7,7 @@ public class TestBuilder {
 
     public void test() {
         Person p = new Person.Builder()
-                .name("翁浩")
+                .name("Timekeeper")
                 .age(22)
                 .sex("男")
                 .isMarried(true)
