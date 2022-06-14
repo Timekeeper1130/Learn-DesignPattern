@@ -16,8 +16,9 @@ public class TestStrategy {
         strategyCompute(new MultiStrategy(), a, b);
         strategyCompute(new DivStrategy(), a, b);
         // 当然也能使用lambda
-        strategyCompute((c, d) -> System.out.println("我是lambda：" + (c + d)), a, b);
-
+        strategyCompute((c, d) -> System.out.println("我是lambda method：" + (c + d)), a, b);
+        IStrategy l = (c, d) -> System.out.println("lambda new：" + (c-d));
+        l.compute(1, 100);
     }
 
     public void strategyCompute(IStrategy strategy, int a, int b) {
