@@ -1,5 +1,7 @@
 package Strategy;
 
+import java.util.function.Supplier;
+
 /**
  * 策略模式测试
  *
@@ -13,10 +15,16 @@ public class TestStrategy {
         strategyCompute(new SubStrategy(), a, b);
         strategyCompute(new MultiStrategy(), a, b);
         strategyCompute(new DivStrategy(), a, b);
+        // 当然也能使用lambda
+        strategyCompute((c, d) -> System.out.println("我是lambda：" + (c + d)), a, b);
+
     }
 
     public void strategyCompute(IStrategy strategy, int a, int b) {
         strategy.compute(a, b);
+    }
+    public Integer t(Supplier<Integer> strategy) {
+        return strategy.get();
     }
 
 }
