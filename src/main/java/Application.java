@@ -1,5 +1,6 @@
 import Builder.TestBuilder;
 import Singleton.TestSingleton;
+import Strategy.TestStrategy;
 import Template.TestTemplate;
 
 /**
@@ -11,6 +12,7 @@ public class Application {
 //        template();
 //        builder();
 //        singleton();
+        strategy();
     }
 
     /**
@@ -37,5 +39,13 @@ public class Application {
     private static void singleton() {
         TestSingleton testSingleton = new TestSingleton();
         testSingleton.test();
+    }
+
+    /**
+     * 策略
+     */
+    private static void strategy() {
+        TestStrategy testStrategy = new TestStrategy();
+        testStrategy.test();
     }
 }
