@@ -34,7 +34,7 @@ public class Application {
     }
 
     /**
-     * 单例测
+     * 单例
      */
     private static void singleton() {
         TestSingleton testSingleton = new TestSingleton();
