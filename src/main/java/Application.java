@@ -1,4 +1,5 @@
 import Builder.TestBuilder;
+import Proxy.TestProxy;
 import Singleton.TestSingleton;
 import Strategy.TestStrategy;
 import Template.TestTemplate;
@@ -12,7 +13,8 @@ public class Application {
 //        template();
 //        builder();
 //        singleton();
-        strategy();
+//        strategy();
+        proxy();
     }
 
     /**
@@ -47,5 +49,13 @@ public class Application {
     private static void strategy() {
         TestStrategy testStrategy = new TestStrategy();
         testStrategy.test();
+    }
+
+    /**
+     * 代理
+     */
+    private static void proxy() {
+        TestProxy testProxy = new TestProxy();
+        testProxy.test();
     }
 }
