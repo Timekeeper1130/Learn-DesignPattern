@@ -1,4 +1,5 @@
 import Builder.TestBuilder;
+import Observer.TestObserver;
 import Proxy.TestProxy;
 import Singleton.TestSingleton;
 import Strategy.TestStrategy;
@@ -14,7 +15,8 @@ public class Application {
 //        builder();
 //        singleton();
 //        strategy();
-        proxy();
+//        proxy();
+        observer();
     }
 
     /**
@@ -57,5 +59,13 @@ public class Application {
     private static void proxy() {
         TestProxy testProxy = new TestProxy();
         testProxy.test();
+    }
+
+    /**
+     * 观察者
+     */
+    private static void observer() {
+        TestObserver testObserver = new TestObserver();
+        testObserver.test();
     }
 }
