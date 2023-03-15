@@ -30,7 +30,7 @@ public class Subject {
      * @author Timekeeper
      */
     public void update(int state) {
-        System.out.println("状态发生变化---------------");
+        System.out.println("状态发生变化---------------" + state);
         this.state = state;
         notifyObs();
     }
@@ -45,7 +45,7 @@ public class Subject {
             return;
         }
         for (Observer observer : observerList) {
-            System.out.println("通知观察者对象名称：" + observer.getName());
+            System.out.println("通知观察者对象名称：" + observer.getName() + "，状态变更为：" + this.state);
         }
     }
 

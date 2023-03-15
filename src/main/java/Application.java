@@ -1,9 +1,14 @@
 import Builder.TestBuilder;
+import Handler.TestHandler;
 import Observer.TestObserver;
 import Proxy.TestProxy;
 import Singleton.TestSingleton;
 import Strategy.TestStrategy;
 import Template.TestTemplate;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author WengHaoo
@@ -16,7 +21,8 @@ public class Application {
 //        singleton();
 //        strategy();
 //        proxy();
-        observer();
+//        observer();
+        handler();
     }
 
     /**
@@ -67,5 +73,13 @@ public class Application {
     private static void observer() {
         TestObserver testObserver = new TestObserver();
         testObserver.test();
+    }
+
+    /**
+     * 调用链
+     */
+    private static void handler() {
+        TestHandler testHandler = new TestHandler();
+        testHandler.test();
     }
 }
