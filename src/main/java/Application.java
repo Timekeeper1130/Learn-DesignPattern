@@ -1,3 +1,4 @@
+import Adapter.TestAdapter;
 import Builder.TestBuilder;
 import Handler.TestHandler;
 import Observer.TestObserver;
@@ -22,7 +23,8 @@ public class Application {
 //        strategy();
 //        proxy();
 //        observer();
-        handler();
+//        handler();
+        adapter();
     }
 
     /**
@@ -81,5 +83,13 @@ public class Application {
     private static void handler() {
         TestHandler testHandler = new TestHandler();
         testHandler.test();
+    }
+
+    /**
+     * 适配器（乱）
+     */
+    private static void adapter() {
+        TestAdapter testAdapter = new TestAdapter();
+        testAdapter.test();
     }
 }
