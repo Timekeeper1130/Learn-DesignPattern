@@ -1,5 +1,6 @@
 import Adapter.TestAdapter;
 import Builder.TestBuilder;
+import FlyWeight.TestFlyWeight;
 import Handler.TestHandler;
 import Observer.TestObserver;
 import Proxy.TestProxy;
@@ -24,7 +25,8 @@ public class Application {
 //        proxy();
 //        observer();
 //        handler();
-        adapter();
+//        adapter();
+        flyWeight();
     }
 
     /**
@@ -91,5 +93,13 @@ public class Application {
     private static void adapter() {
         TestAdapter testAdapter = new TestAdapter();
         testAdapter.test();
+    }
+
+    /**
+     * 享元
+     */
+    private static void flyWeight() {
+        TestFlyWeight testFlyWeight = new TestFlyWeight();
+        testFlyWeight.test();
     }
 }
